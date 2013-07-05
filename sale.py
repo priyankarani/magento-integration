@@ -28,6 +28,15 @@ ORDER_STATES_MAP = {
 }
 
 
+class SaleLine(osv.osv):
+    "Sale Line"
+    _inherit = 'sale.order.line'
+
+    _columns = dict(
+        magento_notes=fields.text("Magento Notes"),
+    )
+
+
 class Sale(osv.Model):
     "Sale"
     _inherit = 'sale.order'
